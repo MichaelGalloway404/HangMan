@@ -84,16 +84,17 @@ chancesDisplay.innerHTML = "you have : " + numChances + " chances left.";
 let lettersGuested = document.querySelector(".lettersGuest");
 
 document.addEventListener("keydown", function(e){
-    if(keysPressed.includes(e.key) === false){keysPressed = keysPressed + e.key;}
+    let keyLowerCase = e.key.toLowerCase();
+    if(keysPressed.includes(keyLowerCase) === false){keysPressed = keysPressed + keyLowerCase;}
     lettersGuested.innerHTML = keysPressed;
     if(gameRunning){
-        if(chosenWord.indexOf(e.key) >= 0){
-            while(chosenWord.indexOf(e.key) >= 0){
-                blankWord = replaceIndex(e.key,blankWord,chosenWord,chosenWord[chosenWord.indexOf(e.key)]);
-                chosenWord = replaceIndex(e.key,chosenWord,chosenWord,"-");
+        if(chosenWord.indexOf(keyLowerCase) >= 0){
+            while(chosenWord.indexOf(keyLowerCase) >= 0){
+                blankWord = replaceIndex(keyLowerCase,blankWord,chosenWord,chosenWord[chosenWord.indexOf(keyLowerCase)]);
+                chosenWord = replaceIndex(keyLowerCase,chosenWord,chosenWord,"-");
             }
         }
-        if(blankWord.indexOf(e.key) < 0){
+        if(blankWord.indexOf(keyLowerCase) < 0){
             numChances -= 1;
         }
         chancesDisplay.innerHTML = "you have : " + numChances + " chances left.";
@@ -110,33 +111,3 @@ function replaceIndex(index, string, word,replacement){
     string = string.slice(0,word.indexOf(index)) + replacement + string.slice(word.indexOf(index)+1,string.length);
     return string;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
