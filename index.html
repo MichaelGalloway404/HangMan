@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +13,7 @@
     <tr>
         <td>
             <label>If on mobile:
-                <input>
+                <input class="textInput" placeholder="guess a letter">
             </label>
         </td>
     </tr>
@@ -25,7 +25,7 @@
     </tr>
     
 </table>
-
-<script src="gameHangMan.js"></script>
+<!-- Without type="module", the browser assumes you're using regular scripts that don’t support import. -->
+<script type="module" src="gameHangMan.js"></script>
 </body>
 </html>
