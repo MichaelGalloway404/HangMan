@@ -24,13 +24,6 @@ html{
     background-color: #35c8dc;
     color: azure;
 }
-
-/* Override for narrow screens */
-@media screen and (max-width: 450px) {
-
-    input,
-    textarea,
-    select {
-        font-size: 16px;
-    }
+input,textarea,select {
+    font-size: 16px;
 }
