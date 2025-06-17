@@ -34,7 +34,7 @@ const buttons = document.querySelectorAll("button");
 // Loop through each button and attach a click event listener
 buttons.forEach(button => {
     button.addEventListener("click", function () {
-        let key = this.innerHTML;
+        let key = this.innerHTML.toLowerCase();
         // if key pressed is not in our bank of pressed keys add it
         if (!keysPressed.includes(key)) {
             keysPressed = keysPressed + key;
