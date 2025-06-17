@@ -98,32 +98,3 @@ function replaceIndex(index, string, word, replacement) {
 function changeImage(img) {
   document.getElementById("hangmanStatus").src = img;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
