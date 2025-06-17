@@ -1,8 +1,8 @@
 import { wordBank } from "./WordBank.js";
 
-// clear user input on page refresh
-const inputContainer = document.querySelector('.textInput');
-inputContainer.value = "";
+// // clear user input on page refresh
+// const inputContainer = document.querySelector('.textInput');
+// inputContainer.value = "";
 
 let randomWord = Math.floor((Math.random() * (wordBank.length - 1)) + 1);
 let chosenWord = wordBank[randomWord];
@@ -33,61 +33,67 @@ chancesDisplay.innerHTML = "you have : " + numChances + " chances left.";
 // letters guessed so far
 let lettersGuested = document.querySelector(".lettersGuest");
 
-// on key press
-document.addEventListener("keydown", function (e) {
-    let keyLowerCase = e.key.toLowerCase();
-    // if key pressed is not in our bank of pressed keys add it, and key pressed is a letter
-    if (!keysPressed.includes(keyLowerCase) && /^[a-z]$/.test(keyLowerCase)) {
-        keysPressed = keysPressed + keyLowerCase;
-    } else {
-        // if already guessed by pass negative score count
-        doubleKeyPress = true;
-    }
-    lettersGuested.innerHTML = "-:" + keysPressed + ":-";
-    if (gameRunning) {
-        // if key pressed is on current word
-        if (chosenWord.indexOf(keyLowerCase) >= 0) {
-            // display to user that they have guessed correctly
-            while (chosenWord.indexOf(keyLowerCase) >= 0) {
-                blankWord = replaceIndex(keyLowerCase, blankWord, chosenWord, chosenWord[chosenWord.indexOf(keyLowerCase)]);
-                chosenWord = replaceIndex(keyLowerCase, chosenWord, chosenWord, "-");
+// Select all buttons on the page
+const buttons = document.querySelectorAll("button");
+// Loop through each button and attach a click event listener
+buttons.forEach(button => {
+    button.addEventListener("click", function () {
+        // Log the innerHTML of the clicked button
+        console.log("Button clicked:", this.innerHTML);
+
+        let keyLowerCase = this.innerHTML;
+        // if key pressed is not in our bank of pressed keys add it, and key pressed is a letter
+        if (!keysPressed.includes(keyLowerCase) && /^[a-z]$/.test(keyLowerCase)) {
+            keysPressed = keysPressed + keyLowerCase;
+        } else {
+            // if already guessed by pass negative score count
+            doubleKeyPress = true;
+        }
+        lettersGuested.innerHTML = "-:" + keysPressed + ":-";
+        if (gameRunning) {
+            // if key pressed is on current word
+            if (chosenWord.indexOf(keyLowerCase) >= 0) {
+                // display to user that they have guessed correctly
+                while (chosenWord.indexOf(keyLowerCase) >= 0) {
+                    blankWord = replaceIndex(keyLowerCase, blankWord, chosenWord, chosenWord[chosenWord.indexOf(keyLowerCase)]);
+                    chosenWord = replaceIndex(keyLowerCase, chosenWord, chosenWord, "-");
+                }
+            }
+            // if letter is not in the word and has not already been used and key pressed is a letter, subtract from score
+            if (blankWord.indexOf(keyLowerCase) < 0 && !doubleKeyPress) {
+                numChances -= 1;
+            }
+            chancesDisplay.innerHTML = "you have : " + numChances + " chances left.";
+            hiddenword.innerHTML = blankWord;
+            if (numChances <= 0) { hiddenword.innerHTML = wordReveal + " Game Over!"; gameRunning = false; }
+            if (blankWord.includes("-") === false) { hiddenword.innerHTML = blankWord + " You Win!"; gameRunning = false; }
+            doubleKeyPress = false;
+
+
+            if (numChances === 9) {
+                changeImage('./assets/Miss1.png');
+            } else if (numChances === 8) {
+                changeImage('./assets/Miss2.png');
+            } else if (numChances === 7) {
+                changeImage('./assets/Miss3.png');
+            } else if (numChances === 6) {
+                changeImage('./assets/Miss4.png');
+            } else if (numChances === 5) {
+                changeImage('./assets/Miss5.png');
+            } else if (numChances === 4) {
+                changeImage('./assets/Miss6.png');
+            } else if (numChances === 3) {
+                changeImage('./assets/Miss7.png');
+            } else if (numChances === 2) {
+                changeImage('./assets/Miss8.png');
+            } else if (numChances === 1) {
+                changeImage('./assets/Miss9.png');
+            } else if (numChances === 0) {
+                changeImage('./assets/GameOver.png');
             }
         }
-        // if letter is not in the word and has not already been used and key pressed is a letter, subtract from score
-        if (blankWord.indexOf(keyLowerCase) < 0 && !doubleKeyPress) {
-            numChances -= 1;
-        }
-        chancesDisplay.innerHTML = "you have : " + numChances + " chances left.";
-        hiddenword.innerHTML = blankWord;
-        if (numChances <= 0) { hiddenword.innerHTML = wordReveal + " Game Over!"; gameRunning = false; }
-        if (blankWord.includes("-") === false) { hiddenword.innerHTML = blankWord + " You Win!"; gameRunning = false; }
-        doubleKeyPress = false;
-
-        
-        if(numChances === 9){
-            changeImage('./assets/Miss1.png');
-        }else if(numChances === 8){
-            changeImage('./assets/Miss2.png');
-        }else if(numChances === 7){
-            changeImage('./assets/Miss3.png');
-        }else if(numChances === 6){
-            changeImage('./assets/Miss4.png');
-        }else if(numChances === 5){
-            changeImage('./assets/Miss5.png');
-        }else if(numChances === 4){
-            changeImage('./assets/Miss6.png');
-        }else if(numChances === 3){
-            changeImage('./assets/Miss7.png');
-        }else if(numChances === 2){
-            changeImage('./assets/Miss8.png');
-        }else if(numChances === 1){
-            changeImage('./assets/Miss9.png');
-        }else if(numChances === 0){
-            changeImage('./assets/GameOver.png');
-        }
-    }
+    });
 });
-
 // helper replace letter at index
 function replaceIndex(index, string, word, replacement) {
     string = string.slice(0, word.indexOf(index)) + replacement + string.slice(word.indexOf(index) + 1, string.length);
@@ -96,5 +102,34 @@ function replaceIndex(index, string, word, replacement) {
 
 // helper for changing hang man image
 function changeImage(img) {
-  document.getElementById("hangmanStatus").src = img;
+    document.getElementById("hangmanStatus").src = img;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
