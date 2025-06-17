@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HangMan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<table>
-    <tr>
-        <td class="hiddenWord">1</td>
-    </tr>
-    <tr>
-        <td>
-            <label>If on mobile:
-                <input class="textInput">
-            </label>
-        </td>
-    </tr>
-    <tr>
-        <td class="playerChances">2</td>
-    </tr>
-    <tr>
-        <td class="lettersGuest">letters guest</td>
-    </tr>
-    
-</table>
-<!-- Without type="module", the browser assumes you're using regular scripts that don’t support import. -->
-<script type="module" src="gameHangMan.js"></script>
+    <div class="imgContainer"><img src="./assets/emptyGallo.png" id="hangmanStatus"></div>
+
+    <div class="interfaceContainer">
+        <table>
+            <tr>
+                <td class="hiddenWord">1</td>
+            </tr>
+            <tr>
+                <td>
+                    <label>If on mobile:
+                        <input class="textInput">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="playerChances">2</td>
+            </tr>
+            <tr>
+                <td class="lettersGuest">letters guest</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <!-- Without type="module", the browser assumes you're using regular scripts that don’t support import. -->
+    <script type="module" src="gameHangMan.js"></script>
 </body>
+
 </html>

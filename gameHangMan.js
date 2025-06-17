@@ -62,6 +62,29 @@ document.addEventListener("keydown", function (e) {
         if (numChances <= 0) { hiddenword.innerHTML = wordReveal + " Game Over!"; gameRunning = false; }
         if (blankWord.includes("-") === false) { hiddenword.innerHTML = blankWord + " You Win!"; gameRunning = false; }
         doubleKeyPress = false;
+
+        
+        if(numChances === 9){
+            changeImage('./assets/Miss1.png');
+        }else if(numChances === 8){
+            changeImage('./assets/Miss2.png');
+        }else if(numChances === 7){
+            changeImage('./assets/Miss3.png');
+        }else if(numChances === 6){
+            changeImage('./assets/Miss4.png');
+        }else if(numChances === 5){
+            changeImage('./assets/Miss5.png');
+        }else if(numChances === 4){
+            changeImage('./assets/Miss6.png');
+        }else if(numChances === 3){
+            changeImage('./assets/Miss7.png');
+        }else if(numChances === 2){
+            changeImage('./assets/Miss8.png');
+        }else if(numChances === 1){
+            changeImage('./assets/Miss9.png');
+        }else if(numChances === 0){
+            changeImage('./assets/GameOver.png');
+        }
     }
 });
 
@@ -71,6 +94,10 @@ function replaceIndex(index, string, word, replacement) {
     return string;
 }
 
+// helper for changing hang man image
+function changeImage(img) {
+  document.getElementById("hangmanStatus").src = img;
+}
 
 
 
