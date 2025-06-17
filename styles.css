@@ -3,45 +3,61 @@
     justify-content: center;
     align-items: center;
 }
-button{
-    background-color: rgb(0, 0, 0);
-    border: solid black 3px;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    margin: 10px;
-    color: aliceblue;
-    font-size: 1rem;
+
+#hangmanStatus{
+    border: solid black 5px;
+    border-radius: 10%;
+    background-color: rgb(21, 81, 86);
 }
-.btnContainer{
+
+button {
+    background-color: #744909;
+    border: solid rgb(55, 38, 14) 3px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    padding: 5px;
+    box-shadow: 0 0 10px rgb(54, 44, 3);
+}
+
+.btnContainer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.buttons{
-    background-color: #f6dfbc;
-    border: solid black 5px;
+
+.buttons {
+    background-color: rgb(95, 60, 18);
+    border: solid rgb(81, 51, 14) 5px;
     border-radius: 10px;
-    max-width: 400px;
+    max-width: 415px;
+    box-shadow: 0 0 10px rgb(54, 44, 3);
 }
-.imgContainer{
+
+.imgContainer {
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
 }
+
 table {
-    background-color: #35c8dc;
+    background-color: rgb(95, 60, 18);
     font-size: 3rem;
-    border: solid rgb(105, 162, 182);
+    border: solid rgb(70, 46, 3) 5px;
     border-radius: 10px;
     padding: 30px;
+    box-shadow: 0 0 10px rgb(54, 44, 3);
 }
 
 td {
-    border: solid rgb(241, 152, 152);
-    background-color: #f6dfbc;
-    color: rgb(199, 96, 129);
+    border: solid rgb(70, 46, 3) 5px;
+    background-color: #744909;
+    color: rgb(48, 37, 4);
     font-size: 2rem;
+    box-shadow: 0 0 10px rgb(54, 44, 3);
 }
 
 html {
@@ -53,9 +69,8 @@ html {
     color: azure;
 }
 
-
-    input,
-    textarea,
-    select {
-        font-size: 16px;
-    }
+input,
+textarea,
+select {
+    font-size: 16px;
+}
