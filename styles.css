@@ -13,13 +13,24 @@
 button {
     background-color: #744909;
     border: solid rgb(55, 38, 14) 3px;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    margin: 5px;
-    color: rgb(0, 0, 0);
-    padding: 1px;
+    border-radius: 10%;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    color: rgb(255, 230, 0);
+    padding: 5px;
     box-shadow: 0 0 10px rgb(54, 44, 3);
+}
+button:active{
+    background-color: #744909;
+    border: solid rgb(119, 80, 27) 1px;
+    border-radius: 10%;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    color: rgb(255, 230, 0);
+    padding: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .btnContainer {
@@ -29,10 +40,12 @@ button {
 }
 
 .buttons {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
     background-color: rgb(95, 60, 18);
     border: solid rgb(81, 51, 14) 5px;
     border-radius: 10px;
-    max-width: 415px;
+    max-width: 450px;
     box-shadow: 0 0 10px rgb(54, 44, 3);
 }
 
@@ -54,18 +67,13 @@ table {
 td {
     border: solid rgb(70, 46, 3) 5px;
     background-color: #744909;
-    color: rgb(48, 37, 4);
+    color: rgb(255, 208, 0);
     font-size: 1.5rem;
     box-shadow: 0 0 10px rgb(54, 44, 3);
 }
 
 html {
     background-color: rgb(24, 110, 119);
-}
-
-.textInput {
-    background-color: #35c8dc;
-    color: azure;
 }
 
 input,
