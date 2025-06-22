@@ -36,7 +36,7 @@ export const wordBank = ['apple', 'orange', 'banana', 'grape', 'watermelon', 'le
     'wakame', 'nori', 'agar', 'spirulina', 'chorella', 'kombu', 'dulse', 'grapeseed', 'linseed', 'hempseed', 'rapeseed',
     'sunflowerseed', 'pumpkinseed', 'sesameseed', 'mustardseed', 'poppyseed', 'chias', 'flaxseed', 'oliveoil', 'sesameoil',
     'coconutoil', 'palmoil', 'canolaoil', 'soyoil', 'corn oil', 'saffloweroil', 'sunfloweroil', 'peanutoil', 'wheatgermoil',
-    'grapeseedoil', 'almondoil', 'avocadooil', 'macademiaoil', 'hempoil', 'flaxseedoil', 'coldpressoil', 'extravirgin',
+    'grapeseedoil', 'almondoil', 'avocadooil', 'macademiaoil', 'hempoil', 'flaxseedoil', 'coldpressoil', 'extravirgin olive oil',
     'maltvinegar', 'whitevinegar', 'applecidervinegar', 'balsamicvinegar', 'redwinevinegar', 'whitewinevinegar', 'sherryvinegar',
     'ricevinegar', 'coconutvinegar', 'honey', 'agave', 'maplesyrup', 'molasses', 'caramelsyrup', 'corn syrup', 'glucose',
     'sweeteners', 'stevia', 'saccharin', 'aspartame', 'sucralose', 'acesulfame', 'keto diet', 'paleo diet', 'vegan diet',
