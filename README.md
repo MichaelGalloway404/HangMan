@@ -7,3 +7,5 @@ I compiled a set of random words from the internet, hopefully you don't get a wo
 The animations are drawn by me, and it works great on any device.  
 Points are not deducted for clicking the same letter twice.  
 The interface consists of buttons for each letter you wish to guess.  
+  
+Try it out: https://michaelgalloway404.github.io/HangMan/  
