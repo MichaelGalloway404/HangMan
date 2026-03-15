@@ -1,11 +1,39 @@
-# Hang Man Game
-Simple hang man game, using only Javascript.  
-This was one of a few projects I worked on while taking some of my easier gen-ed classes at Eastern Oregon University in my spare time I was learning and playing with HTML, CSS, and JavaScript.  
-  
-I compiled a set of random words from the internet, hopefully you don't get a word for a soluble fiber component of corn or other large terms, but hey a little difficulty can be fun.  
+# Hangman Game
 
-The animations are drawn by me, and it works great on any device.  
-Points are not deducted for clicking the same letter twice.  
-The interface consists of buttons for each letter you wish to guess.  
-  
-Try it out: https://michaelgalloway404.github.io/HangMan/  
+A browser-based **Hangman game** built with **JavaScript, HTML, and CSS** that demonstrates interactive UI design, event-driven logic, and dynamic DOM updates.
+
+Play the game:  
+https://michaelgalloway404.github.io/HangMan/
+
+## Overview
+
+This project recreates the classic Hangman word-guessing game where players attempt to identify a hidden word by selecting letters. Incorrect guesses progressively draw the hangman figure while correct guesses reveal letters in the word.
+
+The game uses a randomized word list and interactive letter buttons to provide a simple, device-friendly gameplay experience.
+
+## Key Features
+
+- **Random word selection** from a predefined word list
+- **Interactive letter selection interface**
+- **Dynamic DOM updates** to reveal correct guesses
+- **Progressive hangman drawing animations**
+- **Input validation** preventing duplicate guess penalties
+- **Responsive design** compatible with desktop and mobile devices
+
+## Technical Highlights
+
+- Event-driven letter selection using **JavaScript event listeners**
+- **State tracking** for guessed letters and remaining attempts
+- **DOM manipulation** to update word progress and animations
+- Custom **illustration assets** for hangman animation stages
+
+## Technologies Used
+
+- JavaScript
+- HTML
+- CSS
+
+## Author
+
+Michael Galloway  
+GitHub: https://github.com/michaelgalloway404
